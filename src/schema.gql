@@ -1,0 +1,33 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Mutation {
+  updatePerson(personInput: PersonInput!): Person!
+}
+
+type Person {
+  contact: String!
+  created: DateTime!
+  deleted: DateTime!
+  firstName: String!
+  id: Int!
+  lastName: String!
+  updated: DateTime!
+}
+
+input PersonInput {
+  contact: String!
+  firstName: String!
+  id: Float!
+  lastName: String!
+}
+
+type Query {
+  findAllPerson: [Person!]!
+}

@@ -1,0 +1,33 @@
+
+.navigation {
+    width: 100%;
+    background-color: #596e79;
+    
+}
+
+.navigation ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation ul li{
+    list-style: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.active{
+    border-bottom: 5px solid #c7b198;
+    transition: 1s;
+}
+
+.navigation ul li a{
+    text-decoration: none;
+    padding: 10px;
+    transition: 0.5s;
+    color: #f0ece2;
+}
