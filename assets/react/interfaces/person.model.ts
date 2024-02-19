@@ -4,8 +4,14 @@ export interface IPerson {
     lastName: string
     firstName: string
     contact: string
+    created?: string
+    updated?: string
 }
 
 export interface IPersonQuery {
     findAllPerson: IPerson[]
+}
+
+export interface IPersonTableLgProps {
+    persons: IPerson[]
 }

@@ -6,7 +6,9 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 // Initialize Apollo Client
 const client = new ApolloClient({
   uri: 'https://vnreact.com:441/graphql',
-  cache: new InMemoryCache()
+  cache: new InMemoryCache({
+    addTypename: false
+ }),
 });
 
 function App() {

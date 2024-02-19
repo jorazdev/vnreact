@@ -34,7 +34,7 @@ const HomeView = () => {
                 <h1>Vite + React + Nestjs + Typescript + Docker</h1>
 
                 <div className="p-2 flex flex-col justify-center items-center mt-6">
-                    <h1 className="text-xl mb-3">Framework css Tailwind</h1>
+                    <h1 className="text-xl mb-3">With Framework css Tailwind</h1>
                     <a href="https://tailwindcss.com/" target="_blank" className="text-center">
                         <img src={tailwind} className="w-24" alt="Tailwind logo" />
                     </a>

@@ -6,7 +6,9 @@ export const UPDATE_PERSON_MUTATION = gql`
             id,
             lastName,
             firstName,
-            contact
+            contact,
+            created,
+            updated
         }
     }
 `
@@ -17,7 +19,9 @@ export const ALL_PERSON_QUERY = gql`
             id,
             lastName,
             firstName,
-            contact
+            contact,
+            created,
+            updated
         }
     }
 `
