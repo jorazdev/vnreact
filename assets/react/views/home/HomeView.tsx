@@ -7,10 +7,30 @@ import dockerLogo from '../../../images/docker.png'
 import tailwind from '../../../images/tailwind.svg'
 import Counter from './components/Counter'
 import { useAppSelector } from '../../store/hooks'
+import Detail from './components/Detail'
+import { IDetail, IItem } from '../../interfaces/detail.model'
 
 const HomeView = () => {
     const count = useAppSelector((state) => state.counter.count)
 
+    const back: IDetail = {
+        logo: nestLogo,
+        title: "NestJs",
+        items: [
+            { title: "Database", value: "Postgresql" },
+            { title: "ORM", value: "TypeORM" },
+            { title: "API", value: "Graphql" },
+        ] as IItem[]
+    }
+
+    const front: IDetail = {
+        logo: reactLogo,
+        title: "React",
+        items: [
+            { title: "Store", value: "Redux" },
+            { title: "API", value: "Graphql" },
+        ] as IItem[]
+    }
     return (
         <div className="flex justify-center items-center h-screen">
             <div className="p-4">
@@ -33,11 +53,15 @@ const HomeView = () => {
                 </div>
                 <h1>Vite + React + Nestjs + Typescript + Docker</h1>
 
-                <div className="p-2 flex flex-col justify-center items-center mt-6">
-                    <h1 className="text-xl mb-3">With Framework css Tailwind</h1>
-                    <a href="https://tailwindcss.com/" target="_blank" className="text-center">
-                        <img src={tailwind} className="w-24" alt="Tailwind logo" />
-                    </a>
+                <div className="p-2 flex justify-between items-center mt-6">
+                    <Detail detail={back}/>
+                    <div className="flex flex-col justify-center items-center">
+                        <h1 className="text-xl mb-3">With Framework css Tailwind</h1>
+                        <a href="https://tailwindcss.com/" target="_blank" className="text-center">
+                            <img src={tailwind} className="w-24" alt="Tailwind logo" />
+                        </a>
+                    </div>
+                    <Detail detail={front}/>
                 </div>
                 
                 <div className="text-center">
