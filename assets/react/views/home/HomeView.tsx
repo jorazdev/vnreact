@@ -53,7 +53,7 @@ const HomeView = () => {
                 </div>
                 <h1>Vite + React + Nestjs + Typescript + Docker</h1>
 
-                <div className="p-2 flex justify-between items-center mt-6">
+                <div className="hidden:flex-col p-2 md:flex md:justify-between md:items-center mt-6">
                     <Detail detail={back}/>
                     <div className="flex flex-col justify-center items-center">
                         <h1 className="text-xl mb-3">With Framework css Tailwind</h1>

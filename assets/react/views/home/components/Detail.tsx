@@ -7,7 +7,7 @@ interface IDetailProps {
 const Detail = ({detail}: IDetailProps) => {
     
     return(
-        <div className="border-2 border-gray-300 w-1/4">
+        <div className="border-2 border-gray-300 w-full md:w-1/4">
             <div className="flex justify-center items-center bg-gray-100 ">
                 <a href="https://nestjs.com/" target="_blank">
                     <img src={detail.logo} className="w-5" alt="Nest logo" />
