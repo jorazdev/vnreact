@@ -14,9 +14,10 @@ const Modal = ({ show, title, onShow, children }: IModalProps) => {
     return (
         <div className={`fixed inset-0 z-50 bg-opacity-40 
                          w-screen bg-black backdrop-blur-sm
-                        ${show ? 'flex justify-center items-center' : 'hidden'}`} 
+                         transition-all duration-1000 ease-in-out delay-150
+                        ${show ? 'flex justify-center items-center ' : 'hidden'}`} 
                         onClick={onClose} id="modal">
-            <div className="relative bg-white w-1/2 h-auto rounded-md shadow">
+            <div className="relative bg-white w-1/2 h-auto rounded-md shadow ">
                 <h1 className="text-lg font-semibold py-3 px-2 absolute inset-x-0  
                     bg-gray-100 rounded-tl-md rounded-tr-md shadow">
                         {title}
